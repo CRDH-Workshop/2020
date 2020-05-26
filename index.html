@@ -9,70 +9,10 @@
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <style>
-img {
-  border-radius: 50%;
-}
-</style>
+
 
   <title>CRDH – 2020 IEEE AIVR WORKSHOP</title>
-
-  <script src="js/jquery.js"></script>
-  <script src="js/jquery-migrate.min.js"></script>
-  <script src="js/sdm_wp_scripts.js"></script>
-  <script src="js/wp-quicklatex-frontend.js"></script>
-  <script>(function (html) {
-      html.className = html.className.replace(/\bno-js\b/, 'js')
-  })(document.documentElement);</script>
-
-  <script async src="https://www.youtube.com/iframe_api"></script>
-  <script>
-      var player;
-      var videoId = '2LZJjFDdnm8';
-      var startSeconds = 1;  // set your own video start time when loop play
-      var endSeconds = 35;   // set your own video end time when loop play
-      var playerConfig = {
-          height: '540',
-          width: '100%',
-          videoId: videoId,
-          playerVars: {
-
-              mute: 1,                // Mute the video
-              autoplay: 1,            // Auto-play the video on load
-              controls: 0,            // Show pause/play buttons in player
-              showinfo: 0,            // Hide the video title
-              rel: 0,                 // Hide the relative videos
-              modestbranding: 1,      // Hide the Youtube Logo
-              fs: 0,                  // Hide the full screen button
-              cc_load_policy: 0,      // Hide closed captions
-              iv_load_policy: 3,      // Hide the Video Annotations
-              start: startSeconds,
-              end: endSeconds,
-              autohide: 0, // Hide video controls when playing
-          },
-          events: {
-              'onStateChange': onStateChange,       // reference to Iframe API
-              onReady: function (e) {              // mute the video when loaded
-                  e.target.mute();
-              }
-          }
-      };
-
-      //excute the video in div
-      function onYouTubePlayerAPIReady() {
-
-          player = new YT.Player('myvideo', playerConfig);
-
-      }
-
-      //repload the video when onStateChange=YT.PlayerState.ENDED)
-      function onStateChange(state) {
-          if (state.data === YT.PlayerState.ENDED) {
-              player.seekTo(startSeconds);
-          }
-      }
-
-  </script>
+  <script src="https://www.w3schools.com/lib/w3.js"></script> 
 
   <link rel="profile" href="http://gmpg.org/xfn/11">
   <link rel="dns-prefetch" href="https://fonts.googleapis.com/">
@@ -105,7 +45,18 @@ img {
       <!-- e3r-gVIf-qc.mp4, QYDY_8lL89E.mp4 -->
       <!-- https://developers.google.com/youtube/player_parameters -->
       <div class="custom-header-media">
-        <div id="myvideo"></div>
+        <div id="myvideo">
+  <img class="trailer" src="img/slideshow/realistic_1.jpg">
+  <img class="trailer" src="img/slideshow/realistic_2.jpg">
+  <img class="trailer" src="img/slideshow/realistic_3.jpg">
+  <img class="trailer" src="img/slideshow/realistic_4.jpg">
+  <img class="trailer" src="img/slideshow/interdigital.jpg">
+  <img class="trailer" src="img/slideshow/interdigital-2.jpg">
+  <img class="trailer" src="img/slideshow/interdigital-3.jpg">
+  <script>
+	w3.slideshow(".trailer", 3000);
+  </script>
+</div>
       </div>
 
       <div class="site-branding">
